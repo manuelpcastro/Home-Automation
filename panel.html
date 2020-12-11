@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<title> SISTEMA DOMOTICO </title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="./js/panel.js"></script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+
+
+<header class="w3-container w3-red w3-center" style="padding:18px 6px">
+
+        <h1 class="w3-margin w3-jumbo">SISTEMA DOMOTICO</h1>
+	<p class="w3-xlarge">Practica 4 DSD</p>
+	<hr>
+        <div class="enlaces">
+	    <a href="./index.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PORTADA</a>
+            <a href="./panel.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PANEL</a>
+            <a href="./sensores.html"  class="w3-bar-item w3-button w3-padding-large w3-white">SENSORES</a>
+            <a href="./crearsensor.html" class="w3-bar-item w3-button w3-padding-large w3-white">NUEVO SENSOR</a>
+        </div>
+	<hr>
+</header>
+
+<body>
+
+<h1 style='display:inline-block;width:70%;text-align:justify;padding-left:50;padding-right:50' class="w3-padding-32">Aquí se muestran los sensores de la casa. También puedes gestionar tanto el aire acondicionado como para subir y bajar la persiana de la habitación. Ten en cuenta que encender el aire acondicionado pondrá la habitacion a 22 grados. La persiana modificará la luminosidad en 30/0.</h1>
+
+<div style='display:inline-block;padding-left:50;padding-right:50;pading-top:50' class="w3-content">
+	<h2 class="w3-row-padding w3-light-grey w3-padding-64 w3-container" style="text-align:center"> AC </h2>
+	<h2 style="text-align:center" id="AC" >OFF</h2>
+	<input type="button" onclick="cambiar('AC')" class="w3-button w3-block w3-black w3-margin-bottom" value="Encender/Apagar">
+</div>
+
+<div style='display:inline-block;padding-left:50;padding-right:50;padding-top:50' class="w3-content">
+	<h2 class="w3-row-padding w3-light-grey w3-padding-64 w3-container" style="text-align:center"> Persiana </h2>
+	<h2 style="text-align:center" id="persiana">OFF</h2>
+	<input type="button" onclick="cambiar('persiana')" class="w3-button w3-block w3-black w3-margin-bottom" value="Subir/Bajar">
+</div>
+<div id="resultados" class="w3-row-padding w3-padding-64 w3-container">
+ 
+</div>
+
+</body>
+</html>

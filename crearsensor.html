@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+     	<title> CREAR SENSOR </title>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="./js/crearsensor.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+<header class="w3-container w3-red w3-center" style="padding:18px 6px">
+
+        <h1 class="w3-margin w3-jumbo">SISTEMA DOMOTICO</h1>
+	<p class="w3-xlarge">Practica 4 DSD</p>
+	<hr>
+        <div class="enlaces">
+	    <a href="./index.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PORTADA</a>
+            <a href="./panel.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PANEL</a>
+            <a href="./sensores.html"  class="w3-bar-item w3-button w3-padding-large w3-white">SENSORES</a>
+            <a href="./crearsensor.html" class="w3-bar-item w3-button w3-padding-large w3-white">NUEVO SENSOR</a>
+        </div>
+	<hr>
+</header>
+
+
+<body>
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+<form id="nuevoevento">
+	
+	<label>Nombre sensor</label>
+	<input id="idsensor" class="w3-input w3-padding-16 w3-border" type="text" placeholder="NombreSensor" required><br>
+	<label>Valor actual</label> 
+	<input id="valor" class="w3-input w3-border" type="number" placeholder="0" required> <br>
+	<label>Valor notificacion</label> 
+	<input id="notificacion" class="w3-input w3-border" type="number" placeholder="0" required> <br>
+	<input type="button" onclick="crearSensor()" class="w3-button w3-block w3-black w3-margin-bottom" value="Crear">
+</form>
+</div>
+</div>
+</div>
+
+</body>
+
+
+</html>

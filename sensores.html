@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<title> SENSORES </title>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="./js/sensores.js"></script>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+
+
+
+<header class="w3-container w3-red w3-center" style="padding:18px 6px">
+
+        <h1 class="w3-margin w3-jumbo">SISTEMA DOMOTICO</h1>
+	<p class="w3-xlarge">Practica 4 DSD</p>
+	<hr>
+        <div class="enlaces">
+	    <a href="./index.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PORTADA</a>
+            <a href="./panel.html"  class="w3-bar-item w3-button w3-padding-large w3-white">PANEL</a>
+            <a href="./sensores.html"  class="w3-bar-item w3-button w3-padding-large w3-white">SENSORES</a>
+            <a href="./crearsensor.html" class="w3-bar-item w3-button w3-padding-large w3-white">NUEVO SENSOR</a>
+        </div>
+	<hr>
+</header>
+
+<body>
+
+<h1 style='display:inline-block;text-align:justify;padding-left:50;padding-right:50' class="w3-padding-32">Aquí se pueden modificar los datos de los sensores para "simular" que van cambiando. Se puede probar a poner un numero alto para comprobar que efectivamente salta la alarma en el panel.</h1>
+
+<div id="lista" class="w3-row-padding w3-padding-64 w3-container">
+ 
+</div>
+
+</body>
+</html>
